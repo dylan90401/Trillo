@@ -1,29 +1,28 @@
 .container {
     max-width: 120rem;
-    margin:8rem auto;
-    background-color:var(--color-grey-light-2);
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-2);
     box-shadow: var(--shadow-dark);
-
     min-height: 50rem;
 }
 
 .header {
-    font-size:1.4rem;
+    font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-grey-light-2);
-
+    border-bottom: var(--line);
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
 }
 
 .content {
-    display:flex;
+    display: flex;
 }
 
 .sidebar {
-    background-color:var(--color-grey-dark-1);
+    background-color: var(--color-grey-dark-1);
+
     /*
     flex is shorthand for
     flex-grow
@@ -31,16 +30,39 @@
     flex-basis
     */
     flex: 0 0 18%;
-
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .hotel-view {
     background-color: #fff;
-    height: 80rem;
-    
+
     /* element should grow as much as can */
     flex: 1;
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+    font-size: 1.4rem;
+}
+
+.description {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+
+    // no grow, no shrink; 60% for flex basis.  usually set to percentage you set first two to 0
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+}
+
+.user-reviews {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
